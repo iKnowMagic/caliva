@@ -1,0 +1,66 @@
+{
+  "name": "vue-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "json": "node ./tests/db/index.js & json-server ./tests/db/db.json",
+    "auth": "node ./tests/db/index.js & node ./tests/db/server.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.1.3",
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "firebase": "^5.5.8",
+    "fusioncharts": "^3.13.2-sr.1",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "noty": "^3.2.0-beta",
+    "nprogress": "^0.2.0",
+    "popper.js": "^1.14.5",
+    "tabulator-tables": "^4.1.2",
+    "tooltip.js": "^1.3.1",
+    "vue": "^2.5.17",
+    "vue-fusioncharts": "^2.0.3",
+    "vue-i18n": "^8.3.1",
+    "vue-loading-overlay": "^3.1.0",
+    "vue-meta": "^1.5.5",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.1.1",
+    "@vue/cli-plugin-eslint": "^3.1.1",
+    "@vue/cli-service": "^3.1.1",
+    "@vue/eslint-config-prettier": "^4.0.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "body-parser": "^1.18.3",
+    "eslint": "^5.8.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "json-server": "^0.14.0",
+    "jsonwebtoken": "^8.3.0",
+    "lint-staged": "^7.2.2",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
