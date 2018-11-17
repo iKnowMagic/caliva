@@ -10,6 +10,12 @@ export const mutations = {
   }
 }
 
+export const getters = {
+  getProducts() {
+
+  }
+}
+
 export const actions = {
   init({ state }) {
 
